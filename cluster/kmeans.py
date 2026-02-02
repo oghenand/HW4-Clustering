@@ -20,6 +20,13 @@ class KMeans:
             max_iter: int
                 the maximum number of iterations before quitting model fit
         """
+        # check if vars are correct type (add more cases for tol and max_iter)
+        if not isinstance(k, int):
+            raise TypeError('k must be an integer!')
+        # store k, tol and max_iter
+        self.k = k
+        self.tol = tol
+        self.max_iter = max_iter
 
     def fit(self, mat: np.ndarray):
         """
@@ -36,6 +43,7 @@ class KMeans:
             mat: np.ndarray
                 A 2D matrix where the rows are observations and columns are features
         """
+        
 
     def predict(self, mat: np.ndarray) -> np.ndarray:
         """
