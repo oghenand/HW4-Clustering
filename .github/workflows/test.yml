@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: mst_hw3
+name: clustering_hw4
 
 # Controls when the action will run. 
 on:
