@@ -18,7 +18,7 @@ def test_basic_silhouette():
     num_clusters = 3
     num_feats = 2
     num_samples = 100
-    mat, true_labels = make_clusters(num_samples=100, m=num_feats, k=num_clusters, scale=0.5)
+    mat, true_labels = make_clusters(n=num_samples, m=num_feats, k=num_clusters, scale=0.5)
     
     silhouette = Silhouette()
     scores = silhouette.score(mat, true_labels)

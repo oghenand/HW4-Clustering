@@ -17,7 +17,7 @@ def test_kmeans_basic():
     num_clusters = 3
     num_feats = 2
     num_samples = 100
-    mat, true_labels = make_clusters(num_samples=num_samples, m=num_feats, k=num_clusters, scale=0.5)
+    mat, true_labels = make_clusters(n=num_samples, m=num_feats, k=num_clusters, scale=0.5)
     # create kmeans object now
     km = KMeans(k=num_clusters)
     km.fit(mat)
@@ -65,7 +65,7 @@ def test_kmeans_edge_case():
     num_clusters = 3
     num_feats = 5
     num_samples = 20
-    mat, true_labels = make_clusters(num_samples=num_samples, m=num_feats, k=num_clusters, scale=0.5)
+    mat, true_labels = make_clusters(n=num_samples, m=num_feats, k=num_clusters, scale=0.5)
 
     # test case to make sure code raises proper ValueError if inelgible k is provided
     for k_val in [num_samples+1, 0, -1]:
