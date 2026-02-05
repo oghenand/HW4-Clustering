@@ -2,6 +2,7 @@
 Implementation of KMeans and Silhouette Scoring
 
 # Github Badge
+![example workflow]
 https://github.com/oghenand/HW4-Clustering/actions/workflows/test.yml/badge.svg
 
 # Assignment
