@@ -13,7 +13,7 @@ from cluster import (
         plot_clusters,
         plot_multipanel)
 
-def basic_silhouette_tests():
+def test_basic_silhouette():
     # check if score function works for true mat/label pairing
     num_clusters = 3
     num_feats = 2

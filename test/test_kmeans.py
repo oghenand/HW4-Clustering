@@ -12,7 +12,7 @@ from cluster import (
         plot_clusters,
         plot_multipanel)
 
-def kmeans_basic_tests():
+def test_kmeans_basic():
     # create synthetic data - 0.5 scale to increase separation
     num_clusters = 3
     num_feats = 2
@@ -60,7 +60,7 @@ def kmeans_basic_tests():
             min_label = centroid
     assert min_label == random_point_label, "Label mismatch! Label should be the centroid with the smallest distance from the random point"
     
-def kmeans_edge_case_tests():
+def test_kmeans_edge_case():
     # create synthetic data - 0.5 scale to increase separation
     num_clusters = 3
     num_feats = 5
