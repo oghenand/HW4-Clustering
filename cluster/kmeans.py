@@ -116,6 +116,10 @@ class KMeans:
             np.ndarray
                 a 1D array with the cluster label for each of the observations in `mat`
         """
+        # check if centroids even exist -- only do once fit and should be doine before predict
+        if not hasattr(self, 'centroids'):
+            raise ValueError('KMeans has not been fit yet!')
+
         # check if mat is not 2d
         if np.ndim(mat) != 2:
             raise ValueError('Features matrix must be 2D')
@@ -123,10 +127,6 @@ class KMeans:
         # check if mat has incorrect number of features -- diff number of samples is okay!
         if mat.shape[1] != self.n_features:
             raise ValueError('Number of features must be same as what KMeans was fit on')
-        
-        # check if centroids even exist -- only do once fit and should be doine before predict
-        if not hasattr(self, 'centroids'):
-            raise ValueError('KMeans has not been fit yet!')
 
         # calculate distances and return labels given centroids from self.fit()
         distances = cdist(self.centroids, mat, metric='euclidean')
