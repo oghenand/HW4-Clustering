@@ -1,6 +1,9 @@
 # Assignment 4
 Implementation of KMeans and Silhouette Scoring
 
+# Github Badge
+https://github.com/OWNER/REPOSITORY/actions/workflows/test.yml/badge.svg
+
 # Assignment
 
 ## Overview
