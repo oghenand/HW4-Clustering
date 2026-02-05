@@ -142,7 +142,7 @@ class KMeans:
                 the squared-mean error of the fit model
         """
         # check if erros even exist -- only do once fit
-        if not hasattr(self, 'errors'):
+        if not hasattr(self, 'error'):
             raise ValueError('KMeans has not been fit yet!')
         return self.error
 
